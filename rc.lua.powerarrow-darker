@@ -6,6 +6,7 @@
 --]]
 
 -- {{{ Required libraries
+require("common")
 local gears     = require("gears")
 local awful     = require("awful")
 awful.rules     = require("awful.rules")
@@ -59,13 +60,6 @@ os.setlocale(os.getenv("LANG"))
 -- beautiful init
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-darker/theme.lua")
 
--- common
-modkey     = "Mod4"
-altkey     = "Mod1"
-terminal   = "urxvtc" or "xterm"
-editor     = os.getenv("EDITOR") or "nano" or "vi"
-editor_cmd = terminal .. " -e " .. editor
-
 -- user defined
 browser    = "dwb"
 browser2   = "iron"
@@ -74,15 +68,6 @@ graphics   = "gimp"
 mail       = terminal .. " -e mutt "
 iptraf     = terminal .. " -g 180x54-20+34 -e sudo iptraf-ng -i all "
 musicplr   = terminal .. " -g 130x34-320+16 -e ncmpcpp "
-
-local layouts = {
-    awful.layout.suit.floating,
-    awful.layout.suit.tile,
-    awful.layout.suit.tile.bottom,
-    awful.layout.suit.fair,
-    awful.layout.suit.fair.horizontal,
-}
--- }}}
 
 -- {{{ Tags
 tags = {

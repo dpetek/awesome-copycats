@@ -6,6 +6,7 @@
 --]]
 
 -- {{{ Required libraries
+require("common")
 local gears     = require("gears")
 local awful     = require("awful")
 awful.rules     = require("awful.rules")
@@ -60,13 +61,6 @@ os.setlocale(os.getenv("LANG"))
 -- beautiful init
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/rainbow/theme.lua")
 
--- common
-modkey     = "Mod4"
-altkey     = "Mod1"
-terminal   = "urxvtc" or "xterm"
-editor     = os.getenv("EDITOR") or "nano" or "vi"
-editor_cmd = terminal .. " -e " .. editor
-
 -- user defined
 browser    = "dwb"
 browser2   = "iron"
@@ -76,18 +70,6 @@ graphics   = "gimp"
 -- lain
 lain.layout.termfair.nmaster = 3
 lain.layout.termfair.ncol    = 1
-
-local layouts = {
-    awful.layout.suit.floating,
-    awful.layout.suit.fair,
-    awful.layout.suit.tile,
-    lain.layout.uselessfair.horizontal,
-    lain.layout.uselesstile,
-    lain.layout.uselessfair,
-    lain.layout.termfair,
-    lain.layout.uselesspiral.dwindle
-}
--- }}}
 
 -- {{{ Tags
 tags = {

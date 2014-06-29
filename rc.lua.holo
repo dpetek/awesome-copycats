@@ -6,6 +6,7 @@
 --]]
 
 -- {{{ Required libraries
+require("common")
 local gears     = require("gears")
 local awful     = require("awful")
 awful.rules     = require("awful.rules")
@@ -60,28 +61,12 @@ run_once("compton")
 -- beautiful init
 beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/holo/theme.lua")
 
--- common
-modkey     = "Mod4"
-altkey     = "Mod1"
-terminal   = "urxvtc" or "xterm"
-editor     = os.getenv("EDITOR") or "nano" or "vi"
-editor_cmd = terminal .. " -e " .. editor
-
 -- user defined
 browser    = "dwb"
 browser2   = "iron"
 gui_editor = "gvim"
 graphics   = "gimp"
 musiplr   = terminal .. " -e ncmpcpp "
-
-local layouts = {
-    awful.layout.suit.floating,
-    lain.layout.uselesstile,
-    awful.layout.suit.fair,
-    lain.layout.uselesstile.left,
-    lain.layout.uselesstile.top
-}
--- }}}
 
 -- {{{ Tags
 tags = {
