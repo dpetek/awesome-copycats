@@ -1,6 +1,10 @@
 local awful = require("awful")
+local naughty = require("naughty")
 
 screenshot_cmd="scrot --focused '/home/dpetek/screenshots/%F_%H%M%S.png'"
+browser="/opt/google/chrome/chrome"
+gui_editor="geany"
+explorer="pcmanfm"
 
 globalkeys = awful.util.table.join(
 
@@ -16,3 +20,4 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "-", function () awful.util.spawn("java -jar /home/dpetek/Downloads/Minecraft.jar") end)
 
 )
+
