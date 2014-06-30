@@ -17,7 +17,8 @@ define swap_dialog
 	read -p "Switch to theme: " num ; \
 	if [ ! -z $${num} -a $${num} -ge 1 -a -le $${n_themes} ] ; then \
 	  NEW_THEME=$$($(themes) | head -n$${num} | tail -n1 ) ; \
-	  cp $${NEW_THEME} rc.lua ; \
+      rm rc.lua; \
+      ln -s $${NEW_THEME} rc.lua; \
 	  echo "Theme is now $${NEW_THEME}"; \
   else echo " !! Aborted. " ; fi
 endef

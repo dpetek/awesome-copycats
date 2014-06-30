@@ -1,6 +1,6 @@
 local awful = require("awful")
 
---screenshot_cmd="scrot --focused '/home/dpetek/screenshots/%F_%H%M%S.png'"
+screenshot_cmd="scrot --focused '/home/dpetek/screenshots/%F_%H%M%S.png'"
 
 globalkeys = awful.util.table.join(
 
