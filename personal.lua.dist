@@ -1,0 +1,18 @@
+local awful = require("awful")
+
+--screenshot_cmd="scrot --focused '/home/dpetek/screenshots/%F_%H%M%S.png'"
+
+globalkeys = awful.util.table.join(
+
+    -- Screensaver trigger
+    awful.key({ modkey, "Control" }, "l", function () awful.util.spawn("xscreensaver-command -lock") end),
+    
+    -- Personal application shortcuts
+    awful.key({ modkey, "Control"   }, "i", function () awful.util.spawn("/opt/google/chrome/chrome") end),
+    awful.key({ modkey, "Control"   }, "p", function () awful.util.spawn("/home/dpetek/soft/PHPStorm7/bin/phpstorm.sh") end),
+    awful.key({ modkey, "Control"   }, "y", function () awful.util.spawn("/home/dpetek/soft/pycharm-3.0.1/bin/pycharm.sh") end),
+    awful.key({ modkey, "Control" }, "h", function () awful.util.spawn("hipchat") end),
+    awful.key({ modkey, "Control" }, "g", function () awful.util.spawn("geany") end),
+    awful.key({ modkey, "Control" }, "-", function () awful.util.spawn("java -jar /home/dpetek/Downloads/Minecraft.jar") end)
+
+)

@@ -1,0 +1,7 @@
+-- init mulit-monitor configuration
+run_once("sh " .. os.getenv("HOME") .. "/work/scripts/monitors.sh") 
+
+-- Run xscreensaver
+run_once("xscreensaver", "-no-splash")
+
+
